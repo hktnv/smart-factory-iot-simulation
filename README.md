@@ -6,7 +6,7 @@
 [![Redis](https://img.shields.io/badge/Redis-In%20Memory-red.svg)](https://redis.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Relational-blue.svg)](https://www.postgresql.org/)
 
-Bu proje, Kocaeli Üniversitesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği **TBL324 - İleri Java Uygulamaları** dersi kapsamında geliştirilmiştir. Proje; üretim hattındaki makinelerin durumlarını, anlık IoT sensör verilerini (sıcaklık, titreşim vb.) ve arıza alarmlarını mikroservis mimarisi ile gerçek zamanlı olarak izleyen dağıtık bir sistem simülasyonudur.
+Bu proje, Kocaeli Üniversitesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği **TBL324 - İleri Java Uygulamaları** dersi kapsamında geliştirilmektedir. Proje; üretim hattındaki makinelerin durumlarını, anlık IoT sensör verilerini (sıcaklık, titreşim vb.) ve arıza alarmlarını mikroservis mimarisi ile gerçek zamanlı olarak izleyen dağıtık bir sistem simülasyonudur.
 
 ---
 
