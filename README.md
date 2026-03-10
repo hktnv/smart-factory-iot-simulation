@@ -47,3 +47,35 @@ graph TD
     TS -->|NoSQL| RD
     TS -.->|Eşik Aşımı Tetiklemesi| AS
     AS -->|Geçmiş Alarmlar| PG
+```
+
+## Proje Gereksinimleri ve Karşılanma Durumu
+
+Samet Hoca'nın belirlediği proje değerlendirme kriterlerine göre projenin teknoloji yığını ve hedefleri aşağıdaki gibi planlanmıştır.
+
+---
+
+## Zorunlu İsterler
+
+| Kriter | Açıklama ve Kullanılan Teknoloji |
+|------|--------------------------------|
+| API & Back-end | Spring Boot ile RESTful mimaride iş mantığı katmanları oluşturulacaktır. |
+| Generic Yapılar | BaseSensor<T> ve GenericRepository<T, ID> gibi tip güvenli yapılar kullanılacaktır. |
+| Custom GUI | Hazır grid'ler yerine Java Graphics2D / Canvas ile fabrikanın kuşbakışı krokisi çizilecek; sıcaklık artışlarında makinelerin rengi (Yeşil/Kırmızı) dinamik olarak değişecektir. |
+| JDBC & NoSQL | Makine kayıtları PostgreSQL (JDBC), saniyede bir akan sensör verileri Redis (NoSQL) üzerinde tutulacaktır. |
+| SOLID & OOP | Bağımlılıkların tersine çevrilmesi, Strategy Pattern ve Interface bazlı geliştirme yapılacaktır. |
+| Hata Yönetimi | @ControllerAdvice ile merkezi hata yönetimi sağlanacaktır. Örneğin makine bulunamazsa 404 Not Found, hatalı veri gelirse 400 Bad Request döndürülecektir. |
+| Performans Testi | JMeter veya k6 kullanılarak 10.000 makinenin aynı anda anlık veri gönderdiği bir yük testi simüle edilip raporlanacaktır. |
+| Analiz & Doküman | Mevcut doküman (Mermaid ve Markdown kullanılarak) detaylandırılmıştır. |
+
+---
+
+## Ek Özellikler
+
+| Kriter | Açıklama ve Kullanılan Teknoloji |
+|------|--------------------------------|
+| Mikroservis Mimarisi | Monolitik yapı yerine birbirleriyle JSON üzerinden haberleşen 3 ayrı izole servis yazılacaktır. |
+| Gateway | Servislere gelen tüm trafik Spring Cloud Gateway üzerinden yönetilecektir. |
+| Mobil / Ekstra GUI | Java tabanlı özel çizimli arayüz mobil veya gelişmiş masaüstü platformlarına entegre edilecektir. |
+| Test-Driven Development (TDD) | Geliştirme süreci Red-Green-Refactor döngüsüyle yapılacaktır. Testler (JUnit ve Mockito) iş mantığından önce yazılarak commit geçmişinde tarih damgalarıyla ispatlanacaktır. |
+| Dockerize Sistem | Tüm mimari (PostgreSQL, Redis, Gateway ve Mikroservisler) tek bir `docker-compose up` komutuyla çalıştırılabilir şekilde yapılandırılacaktır. |
