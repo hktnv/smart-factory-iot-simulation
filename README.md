@@ -1,4 +1,4 @@
-# 🏭 Endüstri 4.0: Akıllı Fabrika ve IoT Sensör Telemetri Simülasyonu
+# Endüstri 4.0: Akıllı Fabrika ve IoT Sensör Telemetri Simülasyonu
 
 [![Java](https://img.shields.io/badge/Java-17+-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -10,25 +10,25 @@ Bu proje, Kocaeli Üniversitesi Teknoloji Fakültesi Bilişim Sistemleri Mühend
 
 ---
 
-## 🏗️ Sistem Mimarisi (Microservices & Gateway)
+## Sistem Mimarisi (Microservices & Gateway)
 
 Proje monolitik bir yapı yerine, birbirinden izole çalışan, ölçeklenebilir ve API Gateway arkasında konumlandırılmış mikroservislerden oluşmaktadır.
 
 ```mermaid
 graph TD
     %% İstemci Katmanı
-    UI[🖥️ Custom / Mobil GUI <br> Fabrika Krokisi] -->|REST / JSON İstekleri| AG
+    UI[ Custom / Mobil GUI <br> Fabrika Krokisi] -->|REST / JSON İstekleri| AG
 
     %% Gateway Katmanı
     subgraph "API Gateway (Trafik Yönetimi)"
-        AG[🚪 Spring Cloud / Kong Gateway]
+        AG[ Spring Cloud / Kong Gateway]
     end
 
     %% Servis Katmanı
     subgraph "Mikroservisler (İzole İş Mantığı)"
-        MCS[⚙️ Machine Catalog Service <br> Makine Sicil ve Yönetim]
-        TS[📡 Telemetry Service <br> IoT Sensör Veri Akışı]
-        AS[🚨 Alert Service <br> Anomali ve Alarm Yönetimi]
+        MCS[ Machine Catalog Service <br> Makine Sicil ve Yönetim]
+        TS[ Telemetry Service <br> IoT Sensör Veri Akışı]
+        AS[ Alert Service <br> Anomali ve Alarm Yönetimi]
     end
 
     %% Yönlendirmeler
@@ -38,8 +38,8 @@ graph TD
 
     %% Veri Katmanı
     subgraph "Veritabanı Katmanı"
-        PG[(🐘 PostgreSQL <br> İlişkisel Veriler)]
-        RD[(🟥 Redis <br> Anlık Sensör Verisi)]
+        PG[( PostgreSQL <br> İlişkisel Veriler)]
+        RD[( Redis <br> Anlık Sensör Verisi)]
     end
 
     %% Veri Bağlantıları
